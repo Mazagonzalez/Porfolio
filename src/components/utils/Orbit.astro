@@ -1,0 +1,24 @@
+---
+interface Props {
+    wOrbit: string;
+    wAstro: string;
+    bgAstro: string;
+    marginNegative: string;
+    seg: string;
+}
+
+const { wOrbit, wAstro, bgAstro, marginNegative, seg } = Astro.props;
+---
+
+<!-- Orbita -->
+<div 
+    class={`relative rounded-full border border-white/10 center-content`}
+    style={`width: ${wOrbit}; height: ${wOrbit}; animation: orbit ${ seg }s linear infinite;`}
+>
+    <!-- Astro -->
+    <div 
+        class={`absolute rounded-full bg-gradient-to-b from-black ${bgAstro} ${marginNegative} -translate-x-1/2 left-1/2 top-0`}
+        style={`width: ${wAstro}; height: ${wAstro};`}
+    ></div>
+    <slot />    
+</div>

@@ -1,0 +1,46 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../css/app.css';
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ title ? title : 'My Portfolio' }</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+    <!-- Style -->
+    <ViewTransitions />
+</head>
+<body class="overflow-hidden">
+    <div class="w-full h-screen overflow-hidden text-white">
+
+        <div class="w-full h-full overflow-x-hidden overflow-y-auto scrollbar">
+
+            <main class="max-w-6xl px-4 m-auto">
+                <slot />
+            </main>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<style is:global>
+	html {
+		background: #020617;
+		background-size: 224px;
+		color-scheme: dark light;
+        font-family: 'Poppins', sans-serif;
+	}
+</style>
