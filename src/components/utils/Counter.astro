@@ -1,0 +1,68 @@
+---
+import IconTime from "../../components/icons/IconTime.astro";
+import IconBug from "../../components/icons/IconBug.astro";
+import IconCoffe from "../../components/icons/IconCoffe.astro";
+
+const { id, title } = Astro.props;
+let Component;
+let backgrounds =  [
+        'from-purple-700 to-purple-500', 
+        'from-purple-500 to-pink-700', 
+        'from-pink-700 to-pink-500', 
+        'from-pink-500 to-yellow-300'
+    ];
+
+switch(id) {
+    case 1:
+        Component = IconTime;
+        break
+    case 2:
+        Component = IconBug;
+        break
+    case 3:
+        Component = IconTime;
+        break
+    case 4:
+        Component = IconCoffe;
+        break
+}
+---
+
+<div class="col gap-2 items-center">
+    {backgrounds.map((bg, index) => (
+        id === index + 1 ? (
+            <div class={`w-14 h-14 rounded-2xl center-content bg-gradient-to-r ${bg}`}>
+                <Component class="w-7 h-7 stroke-white" />
+            </div>
+        ) : null
+    ))}
+
+    <div class="row gap-1 items-center mt-4">
+        <h2 id={`counter-${id}`} class="text-4xl font-semibold">0</h2>
+        <span class="text-2xl font-semibold">{ id == 1 ? '' : '+' }</span>
+    </div>
+    <p class="text-sm font-light text-slate-300/90">{ title }</p>
+</div>
+
+<script src="/src/js/app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        for (let i = 1; i <= 4; i++) {
+            let cant
+
+            if(i == 1){
+                cant = 2
+            }else if(i == 2){
+                cant = 700
+            }
+            else if(i == 3){
+                cant = 5000
+            }
+            else if(i == 4){
+                cant = 1200
+            }
+
+            counter(i, cant)
+        }
+    });
+</script>
