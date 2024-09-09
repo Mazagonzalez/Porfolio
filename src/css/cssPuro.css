@@ -1,1 +1,11 @@
-/*  */
+.line-l{
+    background:
+        linear-gradient(#020617, #020617) padding-box,
+        linear-gradient(200deg, #020617 0%,rgb(255 255 255 / 0.15) 50%, #020617 100%) border-box;
+}
+
+.line-r{
+    background:
+        linear-gradient(#020617, #020617) padding-box,
+        linear-gradient(-200deg, #020617 0%,rgb(255 255 255 / 0.15) 50%, #020617 100%) border-box;
+}

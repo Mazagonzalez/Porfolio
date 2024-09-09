@@ -1,0 +1,30 @@
+---
+import IcoLaravel from "../icons/IcoLaravel.astro";
+import IcoAstro from "../icons/IcoAstro.astro";
+import IcoReact from "../icons/IcoReact.astro";
+import IcoJs from "../icons/IcoJs.astro";
+import IcoTailwind from "../icons/IcoTailwind.astro";
+import IcoBootstrap from "../icons/IcoBootstrap.astro";
+import IcoSass from "../icons/IcoSass.astro";
+import IcoCss from "../icons/IcoCss.astro";
+import IcoHtml from "../icons/IcoHtml.astro";
+import IcoSublime from "../icons/IcoSublime.astro";
+import IcoGit from "../icons/IcoGit.astro";
+import IcoGithub from "../icons/IcoGithub.astro";
+
+const { ico } = Astro.props;
+let Component;
+
+const icons = ['laravel', 'astro', 'react', 'js', 'tailwind', 'bootstrap', 'sass', 'css', 'html', 'sublime', 'git', 'github'];
+const route = [IcoLaravel, IcoAstro, IcoReact, IcoJs, IcoTailwind, IcoBootstrap, IcoSass, IcoCss, IcoHtml, IcoSublime, IcoGit, IcoGithub];
+
+const index = icons.findIndex(icon => ico === icon);
+
+Component = index !== -1 ? route[index] : null;
+---
+
+<div class="p-[2px] bg-gradient-to-br from-purple-500 via-pink-400 to-yellow-300 rounded-2xl">
+    <div class="bg-[#0d1724] center-content size-20 rounded-2xl">
+        { Component ? <Component class={`${ico !== 'sublime' ? 'size-10' : 'size-12'}`} /> : '' }
+    </div>
+</div>
