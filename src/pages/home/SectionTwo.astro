@@ -1,0 +1,35 @@
+---
+import IcoExp from "../../components/icons/IcoExp.astro";
+import ContExp from "../../components/utils/ContExp.astro";
+---
+
+<section class="pt-[200px] mx-auto max-w-4xl">
+    <div class="row items-center gap-4 mb-20">
+        <div class="size-20 center-content bg-gradient-to-br rounded-2xl from-purple-500 via-pink-400 to-yellow-300">
+            <IcoExp class="size-10 stroke-white" />
+        </div>
+
+        <h2 class="subtitle">Work experience</h2>
+    </div>
+
+    <ContExp 
+        cargo="Developer" 
+        empresa="Core Soft S.A.S" 
+        fecha="October 2022"
+        descripcion="Responsible for developing applications that improve organizational processes through the automation of processes using ICT, and for providing support in the design and layout of the programs." 
+    />
+
+    <ContExp 
+        cargo="Junior Developer" 
+        empresa="Core Soft S.A.S" 
+        fecha="May 2023"
+        descripcion="Responsible for the development of applications focused on improving organizational processes by automating tasks using information and communication technologies (ICT), in addition to collaborating in the structure and layout of interfaces in Efinti and EfyApp." 
+    />
+
+    <ContExp 
+        cargo="Main Developer  Fronend" 
+        empresa="Efinti Holdings LLC" 
+        fecha="December 2023"
+        descripcion="Main person responsible for the frontend development of the Efinti, Efy, EFYCard, Platinum Edge and EFYToken platforms, implementing components, utilities and responsive designs that guarantee a fluid and high-performance user experience." 
+    />
+</section>

@@ -4,9 +4,15 @@ function formatNumber(number) {
 
 function counter(id, time) {
     let count = 0;
+    let ms = 10;
     const target = time;
     const duration = 1500; // Duración total en milisegundos (1.5 segundos)
-    const increment = target / (duration / 100); // Incremento por intervalo de 100ms
+
+    if(time <= 9){
+        ms = 200;
+    }
+
+    const increment = target / (duration / ms); // Incremento por intervalo de 100ms
 
     let counterElement = document.getElementById('counter-' + id);
 
@@ -18,10 +24,9 @@ function counter(id, time) {
             clearInterval(interval); // Detener el contador cuando llegue al objetivo
         }
 
-        // Usar formato personalizado
         counterElement.textContent = formatNumber(Math.floor(count)); 
 
-    }, 100); // Actualizar cada 100 ms (0.1 segundos)
+    }, 100);
 }
 
 window.counter = counter;

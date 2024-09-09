@@ -1,7 +1,7 @@
 ---
-import IconTime from "../../components/icons/IconTime.astro";
-import IconBug from "../../components/icons/IconBug.astro";
-import IconCoffe from "../../components/icons/IconCoffe.astro";
+import IcoTime from "../icons/IcoTime.astro";
+import IcoBug from "../icons/IcoBug.astro";
+import IcoCoffe from "../icons/IcoCoffe.astro";
 
 const { id, title } = Astro.props;
 let Component;
@@ -14,16 +14,16 @@ let backgrounds =  [
 
 switch(id) {
     case 1:
-        Component = IconTime;
+        Component = IcoTime;
         break
     case 2:
-        Component = IconBug;
+        Component = IcoBug;
         break
     case 3:
-        Component = IconTime;
+        Component = IcoTime;
         break
     case 4:
-        Component = IconCoffe;
+        Component = IcoCoffe;
         break
 }
 ---
@@ -41,10 +41,10 @@ switch(id) {
         <h2 id={`counter-${id}`} class="text-4xl font-semibold">0</h2>
         <span class="text-2xl font-semibold">{ id == 1 ? '' : '+' }</span>
     </div>
-    <p class="text-sm font-light text-slate-300/90">{ title }</p>
+    <p class="text-sm text-center font-light text-slate-300/90">{ title }</p>
 </div>
 
-<script src="/src/js/app.js"></script>
+<script src="/src/js/counter.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i <= 4; i++) {
