@@ -1,0 +1,53 @@
+---
+import IcoUser from "../../components/icons/IcoUser.astro";
+import SquareIcon from "../../components/utils/SquareIcon.astro";
+---
+
+<section class="pt-[150px]">
+    <div class="row items-center gap-4 mb-20">
+        <SquareIcon>
+            <IcoUser class="size-10 stroke-white" />
+        </SquareIcon>
+
+        <h2 class="subtitle">Aboute Me</h2>
+    </div>
+
+    <div class="row gap-5 items-center">
+        <div class="w-1/2">
+            <p class="[&>span]:font-semibold font-light text-slate-300/90">
+                Hello, I’m Carlos Maza, a person <span>focused on achieving my goals.</span> I enjoy the challenges that programming brings, and I always <span>strive to constantly improve, seeking simplicity and efficiency in every project</span>. 
+                <br><br> 
+                I have <span>soft skills</span> that allow me to work both in a <span>team</span> and <span>individually</span>, even <span>under pressure</span> when necessary. I keep myself updated with the latest technologies to continue growing professionally. 
+                <br><br> 
+                I’m a calm person who loves <span>learning new things every day</span> and enjoys the little moments in life, like eating and listening to music. <span>I love the vastness and mystery of space</span>; I have always found inspiration in the <span>stars</span>.
+            </p>
+        </div>
+
+        <div class="w-1/2 center-content">
+            <div class="col gap-5 text-center">
+                <div class="bg-gradient-br rounded-xl">
+                    <img src="/public/images/i_am.jpeg" alt="I AM" class="rounded-xl rotate-[10deg] w-[200px]" loading="lazy">
+                </div>
+
+                <div class="col">
+                    <p class="font-light [&>span]:font-semibold text-slate-300/90">
+                        My age: <span id="counter-5"></span>
+                    </p>
+                    <p class="font-light [&>span]:font-semibold text-slate-300/90">
+                        I'm from: <span>Colombia</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="/src/js/counter.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentYear = new Date().getFullYear();
+                const age = (currentYear- 2003);
+
+                counter(5, age)
+            });
+        </script>
+    </div>
+</section>

@@ -4,6 +4,8 @@ import ViaLactea from "../components/ViaLactea.astro";
 import SectionOne from "./home/SectionOne.astro";
 import SectionTwo from "./home/SectionTwo.astro";
 import SectionThree from "./home/SectionThree.astro";
+import SectionFour from "./home/SectionFour.astro";
+import SectionFive from "./home/SectionFive.astro";
 ---
 
 <Layout>
@@ -16,9 +18,15 @@ import SectionThree from "./home/SectionThree.astro";
         <div class="z-10 relative">
             <SectionOne />          
             
-            <SectionTwo />
+            <div class="max-w-4xl mx-auto">
+                <SectionTwo />
 
-            <SectionThree />
+                <SectionThree />
+
+                <!-- <SectionFour /> => my skill temp -->
+
+                <SectionFive />
+            </div>
         </div>
     </div>
 </Layout>
