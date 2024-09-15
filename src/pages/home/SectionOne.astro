@@ -3,6 +3,7 @@
 import IcoMail from "../../components/icons/IcoMail.astro";
 import IcoGithub from "../../components/icons/IcoGithub.astro";
 import IcoLinkedin from "../../components/icons/IcoLinkedin.astro";
+import IcoDownloadCv from "../../components/icons/IcoDownloadCv.astro";
 /* End Icons */
 
 import Counter from "../../components/utils/Counter.astro";
@@ -29,7 +30,7 @@ import Counter from "../../components/utils/Counter.astro";
 
         <div class="flex flex-col sm:flex-row gap-2 justify-center mt-8 lg:mt-10">
             <a href="mailto:mazagonzalez61@gmail.com" class="btn text-black bg-gray-200 hover:bg-white">
-                Contactame
+                Contact me
 
                 <IcoMail class="w-5 h-5 stroke-black" />
             </a>
@@ -38,7 +39,7 @@ import Counter from "../../components/utils/Counter.astro";
                 <a 
                     href="https://www.linkedin.com/in/carlos-arturo-maza-gonzalez-254b70249/" 
                     target="_blank" 
-                    class="bg-[#0a66c2] hover:bg-[#2c74bd] btn w-1/2 md:w-auto"
+                    class="bg-[#0a66c2] hover:bg-[#2c74bd] btn w-1/3 md:w-auto"
                 >
                     <IcoLinkedin class="w-5 h-5 fill-white relative" />  
                 </a>
@@ -46,9 +47,16 @@ import Counter from "../../components/utils/Counter.astro";
                 <a 
                     href="https://github.com/Mazagonzalez" 
                     target="_blank" 
-                    class="bg-black hover:bg-gray-900 btn w-1/2 md:w-auto"
+                    class="bg-gray-900 hover:bg-gray-800 btn w-1/3 md:w-auto"
                 >
                     <IcoGithub class="w-5 h-5 fill-white relative" />
+                </a>
+
+                <a 
+                    id="download-cv"
+                    class="bg-red-600 hover:bg-red-500 btn w-1/3 md:w-auto"
+                >
+                    <IcoDownloadCv class="w-5 h-5 stroke-white relative" />
                 </a>
             </div>
         </div>

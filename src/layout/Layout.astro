@@ -57,13 +57,16 @@ const { title } = Astro.props;
 </style>
 
 <script is:inline>
+    // Scroll to section
     function scrollToSection(sectionId) {
         var section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     }
+    // End Scroll to section
 
+    // hide nav
     let scrollTimeout;
     const headerNav = document.getElementById('header-nav');
     const fixed = document.getElementById('fixed');
@@ -115,4 +118,16 @@ const { title } = Astro.props;
 
     updateIcons();
     updateEventListeners();
+    // End hide nav
+
+    // Dowload CV
+    document.getElementById('download-cv').addEventListener('click', () => {
+        const pdfUrl = '/public/document/date.pdf';
+
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'CV_Carlos_Maza.pdf';
+        link.click();
+    });
+    // Dowload End
 </script>

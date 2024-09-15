@@ -13,7 +13,7 @@
 
 /* Buttons */
 .btn{
-    @apply rounded-lg px-8 py-3 font-semibold flex justify-center items-center gap-3
+    @apply rounded-lg px-6 py-3 font-semibold flex justify-center items-center gap-3 cursor-pointer
 }
 
 /* Flex box */
