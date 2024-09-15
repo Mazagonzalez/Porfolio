@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import '../css/app.css';
 import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
 
 interface Props {
 	title?: string;
@@ -23,10 +24,11 @@ const { title } = Astro.props;
     <!-- Style -->
     <ViewTransitions />
 </head>
-<body class="overflow-hidden">
-    <div class="w-full h-screen overflow-hidden text-white">
+<body class="scrollbar">
+    <div class="w-full overflow-hidden text-white">
 
-        <div class="w-full h-full overflow-x-hidden overflow-y-auto scrollbar">
+        <div class="w-full h-full">
+            <Nav />
 
             <main>
                 <slot />
@@ -53,3 +55,68 @@ const { title } = Astro.props;
         }
     }
 </style>
+
+<script is:inline>
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    let scrollTimeout;
+    const headerNav = document.getElementById('header-nav');
+    const fixed = document.getElementById('fixed');
+    const pinOn = document.getElementById('pin-on');
+    const pinOff = document.getElementById('pin-off');
+    let swich = false;
+
+    function updateIcons() {
+        if (swich) {
+            pinOn.classList.add('hidden');
+            pinOff.classList.remove('hidden');
+        } else {
+            pinOn.classList.remove('hidden');
+            pinOff.classList.add('hidden');
+        }
+    }
+
+    function updateEventListeners() {
+        if (swich) {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousemove', handleMouseMove);
+        } else {
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('mousemove', handleMouseMove);
+        }
+    }
+
+    function handleScroll() {
+        if (window.scrollY === 0) {
+            headerNav.classList.remove('hide-nav');
+            return;
+        }
+
+        headerNav.classList.remove('hide-nav');
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            headerNav.classList.add('hide-nav');
+        }, 1000);
+    }
+
+    function handleMouseMove(event) {
+        if (event.clientY < 100) {
+            headerNav.classList.remove('hide-nav');
+        }
+    }
+
+    fixed.addEventListener('click', () => {
+        swich = !swich;
+        updateIcons();
+        updateEventListeners();
+    });
+
+    updateIcons();
+    updateEventListeners();
+</script>

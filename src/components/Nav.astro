@@ -1,0 +1,18 @@
+---
+import IcoPin from "./icons/IcoPin.astro";
+import IcoPinOff from "./icons/IcoPinOff.astro";
+---
+
+<header class="fixed top-0 w-full row justify-center z-50">
+    <nav id="header-nav" class="row gap-5 py-4 px-20 rounded-b-2xl">
+        <a onclick="scrollToSection('home')" class="link-nav">Home</a>
+        <a onclick="scrollToSection('experience')" class="link-nav">Experience</a>
+        <a onclick="scrollToSection('skills')" class="link-nav">Skills</a>
+        <a onclick="scrollToSection('about-me')" class="link-nav">About Me</a>
+
+        <button id="fixed" class="outline-none">
+            <IcoPin id="pin-on" class="size-5 stroke-white/50 hover:fill-white hidden" />
+            <IcoPinOff id="pin-off" class="size-5 stroke-white/50 hover:fill-white hidden" />
+        </button>
+    </nav>
+</header>

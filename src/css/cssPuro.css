@@ -1,3 +1,14 @@
+#header-nav {
+    animation: nav linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+    transition: transform 0.3s ease;
+}
+
+.hide-nav {
+    transform: translateY(-100%);
+}
+
 .line-l{
     background:
         linear-gradient(#020617, #020617) padding-box,
