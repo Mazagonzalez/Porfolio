@@ -4,21 +4,25 @@ import ViaLactea from "../components/ViaLactea.astro";
 import SectionOne from "./home/SectionOne.astro";
 import SectionTwo from "./home/SectionTwo.astro";
 import SectionThree from "./home/SectionThree.astro";
+import SectionFour from "./home/SectionFour.astro";
+import SectionFive from "./home/SectionFive.astro";
 ---
 
 <Layout>
-    <div class="py-[50px] relative">
+    <div class="py-[50px] relative md:max-w-5xl mx-auto">
         <!-- Background -->
-        <div class="opacity-70 flex justify-center absolute-center-x top-0 pt-[50px]">
-            <ViaLactea />
-        </div>
+        <ViaLactea class="opacity-70 flex justify-center absolute-center-x top-0 pt-[50px]" />
 
-        <div class="z-10 relative">
+        <div class="z-10 relative size-screen">
             <SectionOne />          
             
             <SectionTwo />
 
             <SectionThree />
+
+            <!-- <SectionFour /> => my skill temp -->
+
+            <SectionFive />
         </div>
     </div>
 </Layout>

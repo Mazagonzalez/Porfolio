@@ -8,7 +8,7 @@ function counter(id, time) {
     const target = time;
     const duration = 1500; // Duración total en milisegundos (1.5 segundos)
 
-    if(time <= 9){
+    if(time <= 30){
         ms = 200;
     }
 

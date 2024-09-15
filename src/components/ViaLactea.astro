@@ -3,30 +3,32 @@ import Orbit from "./utils/Orbit.astro";
 ---
 
 <!-- Neptuno -->
-<Orbit wOrbit="1000px" wAstro="40px" bgAstro="to-[#5f83c2]" marginNegative="-mt-5" seg="120" >
-    <!-- Urano -->
-    <Orbit wOrbit="925px" wAstro="35px" bgAstro="to-[#21c5d1]" marginNegative="-mt-4" seg="100" >
-        <!-- Saturno -->
-        <Orbit wOrbit="850px" wAstro="45px" bgAstro="to-[#e0c07b]" marginNegative="-mt-5" seg="80" >
-            <!-- Júpiter -->
-            <Orbit wOrbit="700px" wAstro="50px" bgAstro="to-[#9c9289]" marginNegative="-mt-6" seg="60" >
-                <!-- Marte -->
-                <Orbit wOrbit="500px" wAstro="25px" bgAstro="to-[#ba3122]" marginNegative="-mt-3" seg="40" >
-                    <!-- Tierra -->
-                    <Orbit wOrbit="400px" wAstro="30px" bgAstro="to-[#238aba]" marginNegative="-mt-4" seg="30" >
-                        <!-- Venus -->
-                        <Orbit wOrbit="300px" wAstro="20px" bgAstro="to-[#bd9873]" marginNegative="-mt-2" seg="20" >
-                            <!-- Mercurio -->
-                            <Orbit wOrbit="200px" wAstro="10px" bgAstro="to-[#c9b29d]" marginNegative="-mt-1.5" seg="10" >
-                                <!-- Sol -->
-                                <div 
-                                    class="w-[120px] h-[120px] rounded-full bg-amber-500 relative center-content" 
-                                    style="box-shadow: 0px 0px 40px rgba(220, 38, 38, 0.925);"
-                                >
-                                    <div class="bg-yellow-200 w-full h-full rounded-full center-content blur-[80px]">
-                                        <div class="bg-red-600 w-24 h-24 rounded-full center-content blur"></div>
+<div {...Astro.props}>
+    <Orbit wOrbit="1000px" wAstro="40px" bgAstro="to-[#5f83c2]" marginNegative="-mt-5" seg="120" >
+        <!-- Urano -->
+        <Orbit wOrbit="925px" wAstro="35px" bgAstro="to-[#21c5d1]" marginNegative="-mt-4" seg="100" >
+            <!-- Saturno -->
+            <Orbit wOrbit="850px" wAstro="45px" bgAstro="to-[#e0c07b]" marginNegative="-mt-5" seg="80" >
+                <!-- Júpiter -->
+                <Orbit wOrbit="700px" wAstro="50px" bgAstro="to-[#9c9289]" marginNegative="-mt-6" seg="60" >
+                    <!-- Marte -->
+                    <Orbit wOrbit="500px" wAstro="25px" bgAstro="to-[#ba3122]" marginNegative="-mt-3" seg="40" >
+                        <!-- Tierra -->
+                        <Orbit wOrbit="400px" wAstro="30px" bgAstro="to-[#238aba]" marginNegative="-mt-4" seg="30" >
+                            <!-- Venus -->
+                            <Orbit wOrbit="300px" wAstro="20px" bgAstro="to-[#bd9873]" marginNegative="-mt-2" seg="20" >
+                                <!-- Mercurio -->
+                                <Orbit wOrbit="200px" wAstro="10px" bgAstro="to-[#c9b29d]" marginNegative="-mt-1.5" seg="10" >
+                                    <!-- Sol -->
+                                    <div 
+                                        class="w-[120px] h-[120px] rounded-full bg-amber-500 relative center-content" 
+                                        style="box-shadow: 0px 0px 40px rgba(220, 38, 38, 0.925);"
+                                    >
+                                        <div class="bg-yellow-200 w-full h-full rounded-full center-content blur-[80px]">
+                                            <div class="bg-red-600 w-24 h-24 rounded-full center-content blur"></div>
+                                        </div>
                                     </div>
-                                </div>
+                                </Orbit>
                             </Orbit>
                         </Orbit>
                     </Orbit>
@@ -34,4 +36,4 @@ import Orbit from "./utils/Orbit.astro";
             </Orbit>
         </Orbit>
     </Orbit>
-</Orbit>
+</div>
