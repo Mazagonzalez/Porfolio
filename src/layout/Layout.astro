@@ -85,6 +85,7 @@ const { title } = Astro.props;
         if (swich) {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('mousemove', handleMouseMove);
+            headerNav.classList.remove('hide-nav');
         } else {
             window.addEventListener('scroll', handleScroll);
             window.addEventListener('mousemove', handleMouseMove);
@@ -92,17 +93,12 @@ const { title } = Astro.props;
     }
 
     function handleScroll() {
-        if (window.scrollY === 0) {
-            headerNav.classList.remove('hide-nav');
-            return;
-        }
-
         headerNav.classList.remove('hide-nav');
 
-        clearTimeout(scrollTimeout);
+        clearTimeout(scrollTimeout)        
         scrollTimeout = setTimeout(() => {
             headerNav.classList.add('hide-nav');
-        }, 1500);
+        }, 500);
     }
 
     function handleMouseMove(event) {
