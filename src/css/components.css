@@ -1,10 +1,10 @@
 /* Title */
 .title{
-    @apply text-[4rem] font-semibold
+    @apply text-[3rem] lg:text-[4rem] font-semibold
 }
 
 .subtitle{
-    @apply text-3xl font-semibold
+    @apply text-2xl lg:text-3xl font-semibold
 }
 
 .text-gradient{
@@ -13,7 +13,7 @@
 
 /* Buttons */
 .btn{
-    @apply rounded-lg px-8 py-3 font-semibold row items-center gap-3
+    @apply rounded-lg px-8 py-3 font-semibold flex justify-center items-center gap-3
 }
 
 /* Flex box */
@@ -64,7 +64,7 @@
 }
 
 .size-screen{
-    @apply max-w-4xl mx-auto
+    @apply max-w-4xl mx-auto px-4 lg:px-0
 }
 
 .link-nav{

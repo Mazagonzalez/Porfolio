@@ -5,7 +5,7 @@ const { cargo, empresa, fecha, descripcion } = Astro.props;
 <div class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10">
     <span class="absolute size-3 rounded-full -left-[40px] top-5 bg-white"></span>
 
-    <div class="col-span-2 col relative pb-10">
+    <div class="col-span-2 col relative pb-5 lg:pb-10">
         <h3 class="text-xl font-semibold text-purple-500">{ cargo }</h3>
         <span class="font-medium">{ empresa }</span>
         <span class="text-xs font-light text-slate-300/90">{ fecha }</span>
