@@ -66,3 +66,7 @@
 .size-screen{
     @apply max-w-4xl mx-auto
 }
+
+.link-nav{
+    @apply cursor-pointer text-sm text-white/50 hover:text-white
+}

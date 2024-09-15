@@ -6,3 +6,11 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes nav {
+    to {
+        position: fixed;
+        background: rgba(31, 41, 56, 0.5);
+        backdrop-filter: blur(25px);
+    }
+}
