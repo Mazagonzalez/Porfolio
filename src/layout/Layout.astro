@@ -31,17 +31,14 @@ const { title } = Astro.props;
     <ViewTransitions />
 </head>
 <body class="scrollbar">
-    <div class="w-full overflow-hidden text-white">
+    <div class="w-full h-full overflow-hidden text-white">
+        <Nav />
 
-        <div class="w-full h-full">
-            <Nav />
+        <main>
+            <slot />
+        </main>
 
-            <main>
-                <slot />
-            </main>
-
-            <Footer />
-        </div>
+        <Footer />
     </div>
 </body>
 </html>

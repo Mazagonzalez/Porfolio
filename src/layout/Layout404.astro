@@ -1,0 +1,46 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../css/app.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+
+    <!-- Favicon -->
+     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+    <!-- Style -->
+    <ViewTransitions />
+</head>
+<body class="scrollbar">
+    <div class="w-full h-full">
+        <main>
+            <slot />
+        </main>
+    </div>
+</body>
+</html>
+
+<style is:global>
+	html {
+        font-family: 'Poppins', sans-serif;
+		background: #020617;
+		background-size: 224px;
+		color-scheme: dark light;
+        scroll-behavior: smooth;
+	}
+
+    @media(prefers-reduce-motion: reduce){
+        html{
+            scroll-behavior: auto;
+        }
+    }
+</style>
+
