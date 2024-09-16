@@ -6,7 +6,7 @@ import SquareIcon from "../../components/utils/SquareIcon.astro";
 
 <section id="skills" class="pt-[100px] lg:pt-[150px]">
     <div class="col items-center gap-3 relative">
-        <SquareIcon>
+        <SquareIcon animation="skills-icon">
             <IcoLight class="size-10 stroke-white" />
         </SquareIcon>
 
@@ -22,14 +22,14 @@ import SquareIcon from "../../components/utils/SquareIcon.astro";
     </div>
 
     <div class="flex sm:flex-col w-full gap-4 justify-center items-center mt-14 z-[1] relative">
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 skills-group-1">
             <CardSkill ico="laravel" />
             <CardSkill ico="astro" />
             <CardSkill ico="react" />
             <CardSkill ico="js" />
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 skills-group-2">
             <CardSkill ico="tailwind" />
             <CardSkill ico="bootstrap" />
             <CardSkill ico="sass" />
@@ -37,7 +37,7 @@ import SquareIcon from "../../components/utils/SquareIcon.astro";
             <CardSkill ico="html" />
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 skills-group-3">
             <CardSkill ico="sublime" />
             <CardSkill ico="git" />
             <CardSkill ico="github" />

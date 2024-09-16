@@ -1,3 +1,11 @@
-<div class="size-20 center-content rounded-2xl z-[1] bg-gradient-br">
+---
+interface Props {
+    animation? : String;    
+} 
+
+const { animation } = Astro.props;
+---
+
+<div class=`size-20 center-content rounded-2xl z-[1] bg-gradient-br ${animation ? animation : ''}`>
     <slot />
 </div>
