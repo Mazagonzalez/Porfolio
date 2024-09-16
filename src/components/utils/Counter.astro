@@ -6,6 +6,7 @@ import IcoCoffe from "../icons/IcoCoffe.astro";
 
 const { id, title } = Astro.props;
 let Component;
+let animation;
 let backgrounds =  [
         'from-purple-700 to-purple-500', 
         'from-purple-500 to-pink-700', 
@@ -16,15 +17,19 @@ let backgrounds =  [
 switch(id) {
     case 1:
         Component = IcoYearExp;
+        animation = 'home-icon-1';
         break
     case 2:
         Component = IcoBug;
+        animation = 'home-icon-2';
         break
     case 3:
         Component = IcoTime;
+        animation = 'home-icon-3';
         break
     case 4:
         Component = IcoCoffe;
+        animation = 'home-icon-4';
         break
 }
 ---
@@ -32,7 +37,7 @@ switch(id) {
 <div class="col gap-2 items-center">
     {backgrounds.map((bg, index) => (
         id === index + 1 ? (
-            <div class={`w-14 h-14 rounded-2xl center-content bg-gradient-to-r ${bg}`}>
+            <div class={`w-14 h-14 rounded-2xl center-content bg-gradient-to-r ${bg} ${animation}`}>
                 <Component class="w-7 h-7 stroke-white" />
             </div>
         ) : null
